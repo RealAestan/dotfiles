@@ -6,9 +6,8 @@
 
 case $BLOCK_BUTTON in
         1) setsid "$TERMINAL" -e newsboat ;;
-	2) setsid newsup >/dev/null & exit ;;
-        3) pgrep -x dunst >/dev/null && notify-send "<b>📰 News module:</b>
-- Shows unread news items
+        2) setsid newsup >/dev/null & exit ;;
+        3) pgrep -x dunst >/dev/null && notify-send "📰 News module" "\- Shows unread news items
 - Shows 🔃 if updating with \`newsup\`
 - Left click opens newsboat
 - Middle click syncs RSS feeds
