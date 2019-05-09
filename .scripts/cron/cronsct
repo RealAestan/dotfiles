@@ -8,7 +8,7 @@ if [ "$hour" -ge 16 ] || [ "$hour" -le 9 ]; then
     else
         delta=$((9-$hour))
     fi
-    sct $((10000-$delta*1000)) $(bc -s <<< "scale=2;(1-$delta/20)")
+    sct $((10000-$delta*1000)) $(bc <<< "scale=2;(1-$delta/20)")
 else
     sct
 fi
