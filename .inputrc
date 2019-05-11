@@ -1,4 +1,9 @@
 $include /etc/inputrc
+set completion-ignore-case on
+set completion-prefix-display-length 2
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set completion-map-case on
 set editing-mode vi
 $if mode=vi
 
@@ -17,3 +22,5 @@ Control-l: clear-screen
 Control-a: beginning-of-line
 
 $endif
+Control-k: menu-complete
+Control-j: menu-complete-backward
