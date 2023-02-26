@@ -1,0 +1,13 @@
+#!/bin/sh
+
+xrandr --dpi 96
+setbg &
+xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
+
+autostart="xcompmgr slstatus"
+
+for program in $autostart; do
+	pidof -s "$program" || "$program" &
+done >/dev/null 2>&1
+
+[ -n "$xrdbpid" ] && wait "$xrdbpid"
