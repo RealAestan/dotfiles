@@ -1,0 +1,10 @@
+[init]
+	defaultBranch = main
+[user]
+	name = "Anthony Margerand"
+	email = anthony.margerand@protonmail.com
+[core]
+	autocrlf = input
+[push]
+	default = simple
+	autoSetupRemote = true
