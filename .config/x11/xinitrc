@@ -2,5 +2,5 @@
 
 . "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
 
-ssh-agent dwm
+ssh-agent dbus-launch dwm
 

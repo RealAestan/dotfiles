@@ -41,7 +41,7 @@ alias \
 
 # These common commands are just too long! Abbreviate them.
 alias \
-	config="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+	config="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME" \
 	ka="killall" \
 	g="git" \
 	trem="transmission-remote" \
