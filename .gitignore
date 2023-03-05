@@ -1,0 +1,4 @@
+.local/share
+.local/state
+.config/zsh/.zcompdump
+.cache
