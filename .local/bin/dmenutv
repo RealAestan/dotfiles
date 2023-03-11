@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Get user selection via dmenu from channels files.
+#chosen=$(cut -d ';' -f1 ~/.local/share/channels/* | dmenu -i -l 30 -bw 2 -c -p "📺 TV" | sed "s/ .*//")
+channelname=$(cut -f1 ~/.local/share/channels/* | awk '{print $1}'| dmenu -l 20 -c -bw 2 -i -p "📺 TV: " ) || exit 
+chosen=$(cut -f1 ~/.local/share/channels/* | grep -i "$channelname" |  awk '{print $NF}')
+
+# Exit if none chosen.
+[ -z "$chosen" ] && exit
+
+# Play selected TV channel
+notify-send "'$channelname' playing."
+mpv "$chosen"
+
