@@ -113,16 +113,16 @@ return packer.startup(function(use)
   }
 
   -- Quick word search under cursor alt+p and alt+n
-  use { "RRethy/vim-illuminate"}
+  use { "RRethy/vim-illuminate" }
 
   -- Telescope
-  use { "nvim-telescope/telescope.nvim"}
+  use { "nvim-telescope/telescope.nvim" }
 
   -- Treesitter
-  use { "nvim-treesitter/nvim-treesitter"}
+  use { "nvim-treesitter/nvim-treesitter" }
 
   -- Git
-  use { "lewis6991/gitsigns.nvim"}
+  use { "lewis6991/gitsigns.nvim" }
 
   -- Auto save
   use { "Pocco81/auto-save.nvim" }
@@ -132,10 +132,19 @@ return packer.startup(function(use)
 
   -- Show colors
   use {
-    'NvChad/nvim-colorizer.lua',
-    config = function ()
-      require'colorizer'.setup()
-    end
+   'NvChad/nvim-colorizer.lua',
+   config = function ()
+     require'colorizer'.setup()
+   end
+  }
+
+  -- Color picker
+  use {
+    "max397574/colortils.nvim",
+    cmd = "Colortils",
+    config = function()
+      require("colortils").setup()
+    end,
   }
 
   -- Markdown preview
