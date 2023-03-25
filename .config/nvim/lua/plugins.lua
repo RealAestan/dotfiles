@@ -138,18 +138,6 @@ return packer.startup(function(use)
    end
   }
 
-  -- Color picker
-  use {
-    "max397574/colortils.nvim",
-    cmd = "Colortils",
-    config = function()
-      require("colortils").setup()
-    end,
-  }
-
-  -- Markdown preview
-  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
-
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

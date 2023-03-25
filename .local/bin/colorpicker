@@ -1,0 +1,20 @@
+#!/bin/sh
+
+ifinstalled pastel xcolor || exit 1
+
+choice="$({ echo "📺"; echo "🎨" ; } | dmenu -l 2 -c -bw 2 -p "How to pick the color:")"
+
+case $choice in
+  📺)
+    color=$(xcolor)
+    ;;
+  🎨)
+    color=$(pastel pick | pastel format hex)
+    ;;
+esac
+
+[ -z "$color" ] && exit
+
+printf "%s" "$color" | xclip -selection clipboard
+notify-send "'$color' copied to clipboard."
+
