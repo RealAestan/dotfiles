@@ -65,7 +65,7 @@ return packer.startup(function(use)
     end
   }
   -- Use Ctrl+fp to list recent git projects
-  use { 
+  use {
     "ahmedkhalf/project.nvim",
     config = function() require("project_nvim").setup {} end
   }
@@ -126,9 +126,6 @@ return packer.startup(function(use)
 
   -- Auto save
   use { "Pocco81/auto-save.nvim" }
-
-  -- Zen modes
-  use { "Pocco81/true-zen.nvim" }
 
   -- Show colors
   use {

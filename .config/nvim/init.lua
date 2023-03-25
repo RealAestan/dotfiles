@@ -41,6 +41,11 @@ set spell
 vim.opt.termguicolors = true
 vim.cmd('colorscheme nord')
 
+---
+-- Gitsigns
+---
+require('gitsigns').setup()
+
 -- LSP and Linting Config
 require("mason").setup()
 require("mason-lspconfig").setup({
@@ -52,6 +57,7 @@ require("mason-lspconfig").setup({
     'docker_compose_language_service', -- docker-compose, npm install @microsoft/compose-language-service
     'gopls', -- go, gopls package
     'html', -- html, npm i -g vscode-langservers-extracted
+    'intelephense', -- php LSP
     'jsonls', -- json, npm i -g vscode-langservers-extracted
     'lua_ls', -- lua, lua-language-server package
     'marksman', -- markdown, marksman-bin package
@@ -73,6 +79,10 @@ lsp.preset('recommended')
 lsp.nvim_workspace()
 
 lsp.setup()
+
+vim.diagnostic.config({
+  virtual_text = true,
+})
 
 require'nvim-treesitter.configs'.setup {
   highlight = {
