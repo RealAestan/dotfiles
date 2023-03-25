@@ -7,8 +7,8 @@ setopt interactive_comments
 unsetopt PROMPT_SP
 
 # History in cache directory:
-HISTSIZE=100
-SAVEHIST=100
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 
 # Load aliases
@@ -73,5 +73,16 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
+# Load fzf completion / key-bindings
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+
+# Load fzf-tab
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
+
+# Load autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Load syntax highlighting; should be last.
-#source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+
