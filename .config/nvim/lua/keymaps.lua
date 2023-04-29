@@ -37,7 +37,6 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
-
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
@@ -68,4 +67,18 @@ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
+
+-- LSP
+keymap('n', '<leader>rn', vim.lsp.buf.rename, opts)
+keymap('n', '<leader>gD', vim.lsp.buf.declaration, opts)
+keymap('n', '<leader>gd', vim.lsp.buf.definition, opts)
+keymap('n', '<leader>gi', vim.lsp.buf.implementation, opts)
+keymap('n', '<leader>sr', vim.lsp.buf.references, opts)
+keymap('n', '<leader>sh', vim.lsp.buf.signature_help, opts)
+keymap('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+keymap('n', '<leader>cs', vim.lsp.buf.format, opts)
+keymap('n', '<leader>gtd', vim.lsp.buf.type_definition, opts)
+keymap('n', '<leader>K', vim.lsp.buf.hover, opts)
+keymap('n', '<leader>gp', vim.diagnostic.goto_prev, opts)
+keymap('n', '<leader>gn', vim.diagnostic.goto_next, opts)
 
