@@ -33,6 +33,8 @@ export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/config"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/config"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch-config"
 
 # Other program settings:
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
